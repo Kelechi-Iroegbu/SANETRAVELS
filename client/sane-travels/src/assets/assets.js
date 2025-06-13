@@ -21,6 +21,12 @@ import Boat from "./Boat.svg"
 import Grouped_text from "./Grouped_text.svg"
 import Group_text2 from "./Group_text2.svg"
 import bg_last from "./bg_last.svg"
+import vector_eco from "./vector_eco.svg"
+import flight_landing from "./flight_landing.svg"
+import flight_takeoff from "./flight_takeoff.svg"
+import direction from "./direction.svg"
+import solar_calender from "./solar_calendar.svg"
+import people from "./people.svg"
 
 
 
@@ -49,5 +55,10 @@ export const assets  = {
     Grouped_text,
     Group_text2,
     bg_last,
-
+    vector_eco,
+    flight_landing,
+    flight_takeoff,
+    direction,
+    solar_calender,
+    people,
 }

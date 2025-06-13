@@ -3,7 +3,7 @@ import { assets } from '../assets/assets'
 
 export default function Footer() {
   return (
-    <div className='relative bg-[#1D535D] h-[510px] w-[1440px] t-[540px] text-white p-15'>
+    <div className=' bg-[#1D535D] h-[510px] w-full t-[540px] text-white p-15'>
         <article className=' grid grid-cols-2 border-b pb-20 pr-60 ]'>
           <div>
             <img class="float-none h-[63.37px] w-[63.37px] top-[81px] left-[116px] bg-[#000000] border rounded-full" src={assets.logo} alt=""/>

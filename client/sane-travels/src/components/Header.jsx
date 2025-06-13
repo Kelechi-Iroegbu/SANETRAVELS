@@ -4,10 +4,10 @@ import { assets } from '../assets/assets'
 export default function Header() {
   return (
     <div className="relative">
-    <div className="flex items-center justify-center w-[1440px] h-[40px]  bg-[#1D535D] p text-white">
+    <div className="flex items-center justify-center w-[fullpx] h-[40px]  bg-[#1D535D] p text-white">
       For emergency, kindly contact 08165629442 to follow-up your request
     </div>
-    <div className="bg-[#E3EBFC] w-[1440px] h-[64px] top-[40px] flex items-center">
+    <div className="bg-[#E3EBFC] w-[fullpx] h-[64px] top-[40px] flex items-center">
       <div className= "flex absolute left-20">
         <img src= {assets.logo} alt=""/>
       </div>
