@@ -7,7 +7,7 @@ import LogoCard from './logoCard'
 import Client_Card from './Client_Card'
 import { useState } from 'react'
 import ReactFlagsSelect from "react-flags-select";
-import Text from './text'
+import Text from './Text'
 
 
 
@@ -199,15 +199,15 @@ const [selected,setSelected] = useState("")
                 </div>
                </form>
                <div className='grid grid-cols-5  w-[fullpx] h-[64px] flex gap-4'>
-                <div className='text-white pl-4 pt-2 '>
+                <div className='pl-4 pt-2 '>
                   <h1  className='flex gap-2'><img src={assets.flight_takeoff} />FROM
                   </h1>
-                  
-                  
+                  <Text selected={selected} setSelected={setSelected}/>
                 </div>
                 <div className='pt-2.5 -ml-15'>
-                <img src={assets.direction} alt=''/>From
+                <img src={assets.direction} alt=''/>To
                 </div>
+                <Text selected={selected} setSelected={setSelected} />
                 <div className='text-white pt-2 -ml-45'>
                   <h1 className='flex gap-2'><img src={assets.flight_takeoff} />TO</h1>
                 </div>

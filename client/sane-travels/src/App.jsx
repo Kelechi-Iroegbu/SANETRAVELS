@@ -4,13 +4,11 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 import './App.css'
-import Text from './pages/text'
 
 export default function App() {
   return (
     <div>
       <Header/>
-      <Text/>
         <Home/>
      
     </div>
