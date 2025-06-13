@@ -2,8 +2,6 @@ import React from 'react'
 
 export default function HomePage_Card(props) {
  
- console.log(props.data)
- 
     return (
     <div className=' inline-block p-4  rounded-lg w-full h-[400px] mt-9 bg-white border-none  '>
             <img src={props.data.locationImageUrl} className='rounded-lg'/>
