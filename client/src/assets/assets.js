@@ -27,6 +27,7 @@ import flight_takeoff from "./flight_takeoff.svg"
 import direction from "./direction.svg"
 import solar_calender from "./solar_calendar.svg"
 import people from "./people.svg"
+import map_booking from "./map_booking.svg"
 
 
 
@@ -61,4 +62,5 @@ export const assets  = {
     direction,
     solar_calender,
     people,
+    map_booking,
 }

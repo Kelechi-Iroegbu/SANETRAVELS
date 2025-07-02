@@ -3,11 +3,17 @@ import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { assets } from "../assets/assets";
 import Footer from "../components/Footer";
-import Client_Card from "./Client_Card";
-import HomePage_Card from "./HomePage_Card";
-import HomePage_OfferCard from "./HomePage_OfferCard";
-import LogoCard from "./logoCard";
-import Text from "./Text";
+import Client_Card from "../components/Client_Card";
+import HomePage_Card from "../components/HomePage_Card";
+import HomePage_OfferCard from "../components/HomePage_OfferCard";
+import LogoCard from "../components/LogoCard";
+import Text from "../components/Text";
+import Header from "../components/Header";
+import Traveler from "../components/Traveler";
+
+
+
+
 
 export default function Home() {
   const flight_itenary = [
@@ -97,12 +103,14 @@ export default function Home() {
     fromCity: "",
     toCity: "",
     departureDate: "",
-    travellers: {
+    travelers: {
       adult: 0,
       children: 0,
       infant: 0,
     },
   });
+  
+
 
   const onChange = (event) => {
     console.log("====================================");
@@ -120,14 +128,29 @@ export default function Home() {
   // logs the payload whenever it changes
   useEffect(() => {
     console.log("Payload Updated:");
-    console.log(payload);
+    
   }, [payload]);
-
+console.log(payload);
   const [showCalendar, setShowCalender] = useState(false);
+
+  const [showList,setshowList] = useState(false);
 
   const [date, setDate] = useState(new Date());
 
+  const [travels,setTravels] = useState("false")
+
+  const onSubmithander = async(e) =>{
+    try {
+      
+    } catch (error) {
+      
+    }
+
+
+  }
   return (
+    <div>
+      <Header/>
     <div className=" relative h-[800px] w-full ">
       <div className="  inset-x-0 top-0 bg-[#000000A6] h-[50px] w-full text-white px-120 flex items-center top-[100px]">
         <div>
@@ -209,7 +232,7 @@ export default function Home() {
 
       <div className="h-[866px] w-full t-[751px] bg-[url(./assets/world_vector.svg)] -rotate-[16.39] pl-11 bg-[#F6F8FA] relative">
         <div className="w-[1248px] h-[150px] t-[750] left-[82px] bg-[#000000] rounded-br-[50px] rounded-tr-[50px] rounded-bl-[50px]">
-          <form className="text-white space-x-4 pt-4 pl-5  flex items-center">
+          <form onSubmit={onSubmithander} className="text-white space-x-4 pt-4 pl-5  flex items-center">
             <input
               type="radio"
               id="contactChoice1"
@@ -316,8 +339,16 @@ export default function Home() {
               </div>
               <h3 className="pl-2">
                 Traveler
-                <h6>Add Date</h6>
+                <h6 className = 'relativecursor-pointer hover:text-gray-300'  onClick={() => setTravels(!travels)}>
+                  {'Add Traveler'}
+                </h6>
+                {travels && (
+                  <Traveler setPayload={setPayload} payload={payload}
+                  />
+                )}
+              
               </h3>
+
             </div>
 
             {/* Search icon */}
@@ -462,6 +493,7 @@ export default function Home() {
       </div>
 
       <Footer />
+    </div>
     </div>
   );
 }

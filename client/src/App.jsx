@@ -1,15 +1,18 @@
 import React from 'react'
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route,BrowserRouter} from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
-import Footer from './components/Footer'
 import './App.css'
+import Booking_Page from './pages/Booking_Page'
 
 export default function App() {
   return (
     <div>
-      <Header/>
-        <Home/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/Book' element={<Booking_Page/>}/>
+      </Routes>
+    
      
     </div>
   )
