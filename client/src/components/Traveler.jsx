@@ -42,8 +42,8 @@ const handleApply = ()=>{
 }
 
   return (
-<div className = ' Container text-black pl-10'>
-<div className='w-[342px] p-4 gap-2 h-[262px] flex flex-col rounded-[5px] bg-[#FFFFFF] '>
+<div className = '  text-black -ml-34'>
+<div className='w-[342px] p-4 gap-2 h-[262px] flex flex-col rounded-[5px] bg-[#FFFFFF]'>
  <div className='flex justify-between  bg-[#FFFFFF]'>
   <p> Adult <span>(12+)</span></p>
   <div className='flex gap-3'>

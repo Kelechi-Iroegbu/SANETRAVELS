@@ -9,7 +9,7 @@ const GridLayout = () => {
   const boxWidth = 141.67;
 
   const handleNextClick = () => {
-    if (scrollContainerRef.current) {
+    if (scrollContainerRef.current) {                                   //// to check binding
       const container = scrollContainerRef.current;
       const containerWidth = container.clientWidth;
       const itemWidth = container?.firstElementChild?.clientWidth; // Added null check for firstElementChild

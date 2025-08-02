@@ -4,7 +4,7 @@ import { assets } from '../assets/assets'
 export default function Header() {
   return (
     <div className="relative">
-    <div className="flex items-center justify-center w-[fullpx] h-[40px]  bg-[#1D535D] p text-white">
+    <div className="flex items-center justify-center w-[fullpx] h-[40px]  bg-primary p text-white">
       For emergency, kindly contact 08165629442 to follow-up your request
     </div>
     <div className="bg-[#E3EBFC] w-[fullpx] h-[64px] top-[40px] flex items-center">
