@@ -28,62 +28,70 @@ export default function BigStepper() {
     case 0:
       Component = <TravelersInfoForm goToNextStep={nextStep} />;
       break;
+    case 1:
+      Component = (
+        <div>
+          <p>Hello step 2</p>
+        </div>
+      );
+      break;
     default:
       Component = "Unknown step";
   }
 
   return (
-    <Stepper sx={{ width: "100%" }}>
-      {steps.map((step, index) => (
-        <Step
-          key={step}
-          indicator={
-            <StepIndicator
-              variant={activeStep <= index ? "soft" : "solid"}
-              // color={activeStep < index ? "neutral" : "primary"}
-              sx={(theme) => ({
-                "--Stepper-verticalGap": "2.5rem",
-                "--StepIndicator-size": "2.5rem",
-                "--Step-gap": "1rem",
-                "--Step-connectorInset": "0.5rem",
-                "--Step-connectorRadius": "1rem",
-                "--Step-connectorThickness": "4px",
-                "--joy-palette-success-solidBg": "red",
-                [`& .${stepClasses.completed}`]: {
-                  "&::after": { bgcolor: "success.solidBg" },
-                },
-                [`& .${stepClasses.active}`]: {
-                  [`& .${stepIndicatorClasses.root}`]: {
-                    border: "4px solid",
-
-                    borderColor: "#fff",
-                    boxShadow: `0 0 0 1px ${theme.vars.palette.primary[500]}`,
-                    backgroundColor: "red",
+    <div>
+      <Stepper sx={{ width: "100%" }} className="mb-5">
+        {steps.map((step, index) => (
+          <Step
+            key={step}
+            indicator={
+              <StepIndicator
+                variant={activeStep <= index ? "soft" : "solid"}
+                // color={activeStep < index ? "neutral" : "primary"}
+                sx={(theme) => ({
+                  "--Stepper-verticalGap": "2.5rem",
+                  "--StepIndicator-size": "2.5rem",
+                  "--Step-gap": "1rem",
+                  "--Step-connectorInset": "0.5rem",
+                  "--Step-connectorRadius": "1rem",
+                  "--Step-connectorThickness": "4px",
+                  "--joy-palette-success-solidBg": "red",
+                  [`& .${stepClasses.completed}`]: {
+                    "&::after": { bgcolor: "success.solidBg" },
                   },
-                },
-                [`& .${stepClasses.disabled} *`]: {
-                  color: "neutral.softDisabledColor",
-                },
-                [`& .${typographyClasses["title-sm"]}`]: {
-                  textTransform: "uppercase",
-                  letterSpacing: "1px",
-                  fontSize: "10px",
-                },
-              })}
-            >
-              {activeStep <= index ? index + 1 : <Check />}
-            </StepIndicator>
-          }
-          sx={[
-            activeStep > index &&
-              index !== 2 && { "&::after": { bgcolor: "red" } },
-          ]}
-        >
-          <StepButton onClick={() => setActiveStep(index)}>{step}</StepButton>
-        </Step>
-      ))}
+                  [`& .${stepClasses.active}`]: {
+                    [`& .${stepIndicatorClasses.root}`]: {
+                      border: "4px solid",
 
+                      borderColor: "#fff",
+                      boxShadow: `0 0 0 1px ${theme.vars.palette.primary[500]}`,
+                      backgroundColor: "red",
+                    },
+                  },
+                  [`& .${stepClasses.disabled} *`]: {
+                    color: "neutral.softDisabledColor",
+                  },
+                  [`& .${typographyClasses["title-sm"]}`]: {
+                    textTransform: "uppercase",
+                    letterSpacing: "1px",
+                    fontSize: "10px",
+                  },
+                })}
+              >
+                {activeStep <= index ? index + 1 : <Check />}
+              </StepIndicator>
+            }
+            sx={[
+              activeStep > index &&
+                index !== 2 && { "&::after": { bgcolor: "red" } },
+            ]}
+          >
+            <StepButton onClick={() => setActiveStep(index)}>{step}</StepButton>
+          </Step>
+        ))}
+      </Stepper>
       <div>{Component}</div>
-    </Stepper>
+    </div>
   );
 }
