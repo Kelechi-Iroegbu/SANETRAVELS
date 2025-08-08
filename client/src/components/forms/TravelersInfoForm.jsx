@@ -1,10 +1,13 @@
+import { Checkbox } from "@mui/joy";
+
 export default function TravelersInfoForm({ goToNextStep }) {
   return (
-    <form className="w-[805px] h-[1048px] bg-[#FFFFFF] absolute top-[100px] left-[82px]">
-      <div className="w-full h[48px]">
-        <h2>Traveller Details</h2>
-        <div className="flex justify-between items-center">
-          <div className="flex items-center">
+    <div className='w-full h-[1448px]'>
+    <form className="w-[805px] h-[1048px] bg-[#FFFFFF]  top-[100px] left-[82px]">
+      <div className="w-full h[48px] p-2 ">
+        <h2 className='p-4 mt-4' >Traveller Details</h2>
+        <div className="flex justify-between items-center p-4 mb-2">
+          <div className="flex items-center gap-4">
             <svg
               width="39"
               height="40"
@@ -21,28 +24,34 @@ export default function TravelersInfoForm({ goToNextStep }) {
           </div>
           <h2>0/1 added</h2>
         </div>
-        <div className="w-[760px] h-[48px] bg-[#F5F5F5] mx-auto flex items-center pl-4">
+        <div className="w-[760px] h-[48px] bg-[#F5F5F5] mx-auto flex items-center pl-4 mb-3">
           <p className="">
             Important: Enter name as mentioned on your passport or Government
             approved IDs.
           </p>
         </div>
-        <div className="border border-subPrimary h-[699px] w-[761px]">
-          <label class="inline-flex items-center border-b w-[760px] h-[50px]">
+        
+        <div className="border border-subPrimary h-[699px] w-[761px] border-b mx-auto  ">
+        
+        <div className='border-b w-full '>
+        
+          <label class="inline-flex items-center  w-[760px] h-[50px] pl-4  ">
             <input
               type="checkbox"
-              class="form-checkbox h-5 w-5 text-blue-600"
+              class="form-checkbox h-5 w-5 text-blue-600 "
             />
-            <span class="ml-2 text-gray-700">Adult (1)</span>
+            <p class="ml-2 text-gray-700  ">Adult (1)</p>
           </label>
+          </div>
+          <div className='w-full p-4 space-y-6.5 mt-5'>
           <label class="block w-[224px] h-[73px]">
-            <span class="text-gray-700">Title</span>
+            <p class="text-gray-700">Title</p>
             <select
               required
-              class="mt-2  w-[224px] h-[48px] border border-gray-300 bg-white text-gray-700 invalid:border-red-500"
+              class="mt-2  w-[224px] h-[48px] border border-gray-300 bg-white text-gray-700"
             >
               <option value="" selected>
-                Select an option
+                
               </option>
               <option value="">Mr</option>
               <option value="">Mrs</option>
@@ -101,19 +110,210 @@ export default function TravelersInfoForm({ goToNextStep }) {
                 />
               </div>
             </div>
-            <div></div>
           </div>
-        </div>
+           <div className="inline-flex">
+            <div class="flex flex-wrap gap-4">
+              <div class="flex flex-col">
+                <label
+                  for="firstName"
+                  class="mb-1 text-sm font-medium text-gray-700"
+                >
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="John"
+                  class="w-48  px-3 py-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label
+                  for="middleName"
+                  class="mb-1 text-sm font-medium text-gray-700"
+                >
+                  Middle Name
+                </label>
+                <input
+                  type="text"
+                  id="middleName"
+                  name="middleName"
+                  placeholder="Doe"
+                  class="w-48 px-3 py-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label
+                  for="lastName"
+                  class="mb-1 text-sm font-medium text-gray-700"
+                >
+                  Gender
+                </label>
+                <div className='flex gap-2'>
+                <div className='inline-flex w-23 border h-10.5 items-center gap-2 px-2'>
+                <input
+                  type="Radio"
+                  id=""
+                  name="Male"
+                  class=" px-3 py-2  border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+                <label>Male</label>
+                </div>
+                <div className='inline-flex w-23 border h-10.5 items-center px-2 gap-2'>
+                <input
+                  type="Radio"
+                  id=""
+                  name="Male"
+                  class=" px-3 py-2  border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+                <label>Female</label>
+                </div>
+                </div>
+              </div>
+              
+            </div>
+          
+          </div>
+          <div className='flex gap-4'>
+          <div className='flex flex-col '>
+            <label for="Mobile No"
+                  class="mb-1 text-sm font-medium text-gray-700"
+            >Mobile No</label>
+            <div className='flex'>
+            <input
+                  type="number"
+                  id="PhoneNumber"
+                  name="Phone Number"
+                  placeholder="PhoneNumber"
+                  class="w-24 px-3 py-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <input
+                  type="number"
+                  id="PhoneNumber"
+                  name="Phone Number"
+                  placeholder="PhoneNumber"
+                  class="w-24 px-3 py-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            </div>
+          </div>
+            <div class="flex flex-col">
+                <label
+                  for="middleName"
+                  class="mb-1 text-sm font-medium text-gray-700"
+                >
+                  Email 
+                </label>
+                <input
+                  type="text"
+                  id="Email"
+                  name="Email"
+                  placeholder="user@mail.com"
+                  class="w-48 px-3 py-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+            </div>
+            <div className='pt-3'>
+              <p>PassPort Details</p>
+            </div>
+            <div className="inline-flex">
+            <div class="flex flex-wrap gap-4">
+              <div class="flex flex-col">
+                <label
+                  for="firstName"
+                  class="mb-1 text-sm font-medium text-gray-700"
+                >Passport Number</label>
+                 <input
+                  type="number"
+                  id="Passport number"
+                  name="Passport"
+                  placeholder="12121212121"
+                  class="w-48  px-3 py-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+
+              </div>
+              <div class="flex flex-col">
+                <label
+                  for="firstName"
+                  class="mb-1 text-sm font-medium text-gray-700"
+                >Passport Number</label>
+                 <input
+                  type="number"
+                  id="Passport number"
+                  name="Passport"
+                  placeholder="12121212121"
+                  class="w-48  px-3 py-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+
+              </div>
+              <div class="flex flex-col">
+                <label
+                  for="firstName"
+                  class="mb-1 text-sm font-medium text-gray-700"
+                >Passport Number</label>
+                 <input
+                  type="number"
+                  id="Passport number"
+                  name="Passport"
+                  placeholder="12121212121"
+                  class="w-48  px-3 py-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+
+              </div>
+              <div class="flex flex-col">
+                <label
+                  for="firstName"
+                  class="mb-1 text-sm font-medium text-gray-700"
+                >Passport Number</label>
+                 <input
+                  type="number"
+                  id="Passport number"
+                  name="Passport"
+                  placeholder="12121212121"
+                  class="w-48  px-3 py-2 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+
+              </div>
+              </div>
+              </div>
+
+            
+            
+            
+            
+            
       </div>
-      <div className="flex justify-end mt-4">
+      </div>
+      </div>
+      
+    </form>
+    <div className="flex justify-end w-full">
+      <label class="inline-flex items-center  w-[760px] h-[50px]  ">
+            <input
+              type="checkbox"
+              class="form-checkbox h-5 w-5 text-blue-600 "
+            />
+            <p class="ml-2 text-gray-700  ">By proceeding you agree you have read and accepted our Terms and Conditions</p>
+          </label>
+        
+        <button className='w-[74px] h-[48px] items-center bg-secondary'>back</button>
         <button
           type="button"
           onClick={goToNextStep}
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-blue-500 text-white w-[104px] h-[48px] rounded hover:bg-blue-600"
         >
-          Next
+          Continue
         </button>
       </div>
-    </form>
+    </div>
   );
 }

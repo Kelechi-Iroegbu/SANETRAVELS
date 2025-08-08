@@ -8,7 +8,7 @@ export default function Form_Page() {
     <div>
       <Header />
 
-      <div className="px-10 parent w-full h-[1440px] bg-[#F5F5F5] relative ">
+      <div className="px-10 parent w-full h-[1440px] bg-[#F5F5F5]  ">
         <BigStepper />
         
       </div>

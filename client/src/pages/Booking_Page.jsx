@@ -13,7 +13,7 @@ import Policy from "../components/Policy";
 
 
 export default function Booking_Page() {
-  const [inBound,setBound] =useState(false)
+  const [inBound,setBound] =useState(true)
   const [outBound,setOutbound] = useState(false)
   const [connect,setConnect] = useState(true)
 
